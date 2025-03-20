@@ -1,0 +1,24 @@
+def calcu():
+    while True:
+     num1 = float(input("Enter first Number: "))
+     num2 =float(input("Enter Second Number: "))
+     operator = input("Enter an Operator(+,-,*,/): ")
+
+     if operator == "+":
+        result= num1+num2
+     elif operator =="-":
+        result=num1-num2
+     elif operator == "*":
+        result=num1*num2
+     elif operator == "/":
+        if num2!=0:
+         result=num1/num2
+        else:
+            print("Error!Division by Zero is not allowed.")
+            return
+     else:
+         print("Error! Invalid Operator.")
+         return
+     print(f"{num1}{operator}{num2}={result}")
+
+calcu()
